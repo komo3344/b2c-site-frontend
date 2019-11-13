@@ -6,6 +6,7 @@ import NaverLogin from 'react-naver-login';
 import FacebookLogin from 'react-facebook-login';
 import kakaoLoginButton from '../../../image/kakao_account_login_btn_medium_narrow.png'
 import naverLoginButton from '../../../image/naver_login.PNG'
+import URL from '../../URL/URL'
 
 class Login extends Component {
   state = {
@@ -33,7 +34,7 @@ class Login extends Component {
     data['user_type'] = 'naver'
 
     var user_list
-    axios.get('http://127.0.0.1:8000/user/')
+    axios.get(`${URL.userlist}`)
       .then(res => {
         user_list = res.data
         var login_data = {}
@@ -65,7 +66,7 @@ class Login extends Component {
 
     // data.id
     var user_list
-    axios.get('http://127.0.0.1:8000/user/')
+    axios.get(`${URL.userlist}`)
       .then(res => {
         user_list = res.data
         var login_data = {}
@@ -96,7 +97,7 @@ class Login extends Component {
     data['user_type'] = 'facebook'
     
     var user_list=[]
-    axios.get('http://127.0.0.1:8000/user/')
+    axios.get(`${URL.userlist}`)
       .then(res => {
         user_list = res.data
         var login_data = {}
@@ -167,7 +168,7 @@ class Login extends Component {
           
           <NaverLogin
             clientId="zd77osJ0K94OH8504tNu"
-            callbackUrl="http://127.0.0.1:3000/auth"
+            callbackUrl="https://projectsite-b2c.herokuapp.com/auth"
             render={(props) => 
             <div>
               <img width='23.5%' height='65px' src ={naverLoginButton} onClick={props.onClick} alt='NAVER LOGIN BUTTON'/>
