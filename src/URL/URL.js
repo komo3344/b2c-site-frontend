@@ -1,19 +1,19 @@
-const storelist = 'http://127.0.0.1:8000/store/';
-const storefile = 'http://127.0.0.1:8000/store-file/';
-const mystorefile =   'http://127.0.0.1:8000/mystore-file/';
-const mystore = 'http://127.0.0.1:8000/mystore/';
-const review =    'http://127.0.0.1:8000/review/';
-const reviewfile =    'http://127.0.0.1:8000/review-file/';
-const re_review = 'http://127.0.0.1:8000/review-comment/';
-const token_refresh =  'http://127.0.0.1:8000/api-token-refresh/'
-const token_auth =     'http://127.0.0.1:8000/api-token-auth/'
-const currentuser =  'http://127.0.0.1:8000/current-user/'
-const signup =    'http://127.0.0.1:8000/rest-auth/registration/signup/';
+const storelist = 'https://agile-fjord-43798.herokuapp.com/store/';
+const storefile = 'https://agile-fjord-43798.herokuapp.com/store-file/';
+const mystorefile =   'https://agile-fjord-43798.herokuapp.com/mystore-file/';
+const mystore = 'https://agile-fjord-43798.herokuapp.com/mystore/';
+const review =    'https://agile-fjord-43798.herokuapp.com/review/';
+const reviewfile =    'https://agile-fjord-43798.herokuapp.com/review-file/';
+const re_review = 'https://agile-fjord-43798.herokuapp.com/review-comment/';
+const token_refresh =  'https://agile-fjord-43798.herokuapp.com/api-token-refresh/'
+const token_auth =     'https://agile-fjord-43798.herokuapp.com/api-token-auth/'
+const currentuser =  'https://agile-fjord-43798.herokuapp.com/current-user/'
+const signup =    'https://agile-fjord-43798.herokuapp.com/rest-auth/registration/signup/';
 
 
-const login =     'http://127.0.0.1:8000/rest-auth/login/';
-const logout =    'http://127.0.0.1:8000/rest-auth/logout/';
-const userlist =  'http://127.0.0.1:8000/user/';
+const login =     'https://agile-fjord-43798.herokuapp.com/rest-auth/login/';
+const logout =    'https://agile-fjord-43798.herokuapp.com/rest-auth/logout/';
+const userlist =  'https://agile-fjord-43798.herokuapp.com/user/';
 
 
 
