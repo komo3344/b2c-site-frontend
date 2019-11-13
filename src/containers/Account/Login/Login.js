@@ -6,7 +6,7 @@ import NaverLogin from 'react-naver-login';
 import FacebookLogin from 'react-facebook-login';
 import kakaoLoginButton from '../../../image/kakao_account_login_btn_medium_narrow.png'
 import naverLoginButton from '../../../image/naver_login.PNG'
-import URL from '../../URL/URL'
+import URL from '../../../URL/URL'
 
 class Login extends Component {
   state = {
