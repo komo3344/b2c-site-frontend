@@ -103,7 +103,7 @@ class DetailStore extends Component {
 
   handle_info_edit = (e, store_name, business_number, title, content) => {
     e.preventDefault()
-    axios.put(`http://127.0.0.1:8000/store/${this.props.store_id}`, {
+    axios.put(`${URL.storelist}${this.props.store_id}`, {
       store_name: store_name,
       business_number: business_number,
       title: title,

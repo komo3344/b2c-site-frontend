@@ -64,7 +64,7 @@ class ReviewContainer extends Component {
 
   get_review = () => { // 리뷰 리랜딩을 위한 함수
     var list
-    Axios.get(`http://127.0.0.1:8000/review/store/${this.props.store_id}`, {
+    Axios.get(`https://agile-fjord-43798.herokuapp.com/review/store/${this.props.store_id}`, {
       headers: {
         Authorization: `jwt ${localStorage.getItem('token')}`
       }
@@ -75,7 +75,7 @@ class ReviewContainer extends Component {
           Review: res.data,
           re: res.data
         })
-        Axios.get('http://127.0.0.1:8000/review-file/', {
+        Axios.get('https://agile-fjord-43798.herokuapp.com/review-file/', {
           headers: {
             Authorization: `jwt ${localStorage.getItem('token')}`
           }
@@ -98,7 +98,7 @@ class ReviewContainer extends Component {
           ).catch(e=>console.log(e))
       }
     )
-    Axios.get(`http://127.0.0.1:8000/review-comment`, {
+    Axios.get(`https://agile-fjord-43798.herokuapp.com/review-comment`, {
       headers: {
         Authorization: `jwt ${localStorage.getItem('token')}`
       }
@@ -114,7 +114,7 @@ class ReviewContainer extends Component {
 
   componentDidMount() { // 컴포넌트가 랜더될때 필요한 정보 get
     var list
-    Axios.get(`http://127.0.0.1:8000/review/store/${this.props.store_id}`, {
+    Axios.get(`https://agile-fjord-43798.herokuapp.com/${this.props.store_id}`, {
       headers: {
         Authorization: `jwt ${localStorage.getItem('token')}`
       }
@@ -125,7 +125,7 @@ class ReviewContainer extends Component {
           Review: res.data,
           re: res.data
         })
-        Axios.get('http://127.0.0.1:8000/review-file/', {
+        Axios.get('https://agile-fjord-43798.herokuapp.com/review-file/', {
           headers: {
             Authorization: `jwt ${localStorage.getItem('token')}`
           }
@@ -148,7 +148,7 @@ class ReviewContainer extends Component {
           ).catch(e=>console.log(e))
       }
     )
-    Axios.get(`http://127.0.0.1:8000/review-comment`, {
+    Axios.get(`https://agile-fjord-43798.herokuapp.com/review-comment`, {
       headers: {
         Authorization: `jwt ${localStorage.getItem('token')}`
       }
@@ -228,7 +228,7 @@ class ReviewContainer extends Component {
   }
 
   deleteComment = (e, id) => { // 댓글 삭제 함수
-    Axios.delete(`http://127.0.0.1:8000/review/${id}`, {
+    Axios.delete(`https://agile-fjord-43798.herokuapp.com/review/${id}`, {
       headers: {
         Authorization: `jwt ${localStorage.getItem('token')}`
       }
@@ -241,7 +241,7 @@ class ReviewContainer extends Component {
   }
 
   deleteReComment = (e, id) => { // 대댓글 삭제 함수
-    Axios.delete(`http://127.0.0.1:8000/review-comment/${id}`, {
+    Axios.delete(`https://agile-fjord-43798.herokuapp.com/review-comment/${id}`, {
       headers: {
         Authorization: `jwt ${localStorage.getItem('token')}`
       }
@@ -254,7 +254,7 @@ class ReviewContainer extends Component {
 
   handle_B_comment_create = (e, data, r_id, r_r_id) => { // 사장 댓글 생성 함수
     e.preventDefault()
-    Axios.post('http://127.0.0.1:8000/review-comment/', {
+    Axios.post('https://agile-fjord-43798.herokuapp.com/review-comment/', {
       s_id: this.props.store_id,
       r_id: r_id,
       u_id: localStorage.getItem('user_id'),
@@ -274,7 +274,7 @@ class ReviewContainer extends Component {
 
   handle_C_comment_edit = (e, id, comment, star_score) => { // 고객 댓글 수정 함수
     e.preventDefault()
-    Axios.put(`http://127.0.0.1:8000/review/${id}`, {
+    Axios.put(`https://agile-fjord-43798.herokuapp.com/review/${id}`, {
       comment: comment,
       star_score: star_score
     }, {
