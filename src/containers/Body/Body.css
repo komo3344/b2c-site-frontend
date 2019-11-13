@@ -1,0 +1,18 @@
+.box {
+  width: 100%;
+}
+
+.store {
+  width: 70%;
+  float: left;
+  box-sizing: border-box;
+  background: darkolivegreen;
+  padding: 3%;
+}
+.info {
+  width: 30%;
+  padding: 3%;
+  float: right;
+  box-sizing: border-box;
+  background: skyblue;
+}

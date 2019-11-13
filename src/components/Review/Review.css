@@ -1,0 +1,43 @@
+.Review {
+  height: min-content;
+}
+/*이 문장 밑으로 부터 정리한거*/
+/*C 수정시*/
+#C_comment{
+  display: block;
+}
+
+#C_comment_edit{
+  display: none;
+}
+
+#C_comment_buttons{
+  display: block;
+}
+/*B 수정시*/
+#B_comment{
+  display: block;
+}
+
+#B_comment_edit{
+  display: none;
+}
+
+#B_comment_buttons{
+  display: block;
+}
+/*B 생성시*/
+#B_comment_create_buttons{
+  display: block;
+}
+
+#B_comment_create{
+  display: none;
+}
+.review {
+ height: max-content;
+}
+
+.re_review {
+  height: max-content;
+}

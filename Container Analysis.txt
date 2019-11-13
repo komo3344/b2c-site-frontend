@@ -1,0 +1,84 @@
+각 Container 필요한 state 또는 fetch 요청
+
+#AddStore
+Body'B type' button => BodyContainer display_form(addstore) =: display_form
+=> X
+/*
+state : 
+AddStore에서 받은 정보를 부모 클래스의 Submit 함수에서 처리,
+BodyContainer 에서 Post요청을 보내고 state의 display를 (home or 해당가게 DetailStore로) 으로 지정
+*/
+
+#Body
+BodyContainer & BodyContainer2 display_form(home) =: display_form, type
+=> StoreList(cpnt) =: display_form, type, data
+/*
+state : 
+모든 가게의 List를 fetch 요청, 해당 정보를 StoreList에 담아서 보내준다
+B type의 AddStore 버튼을 포함하고 있음
+*/
+
+#BodyContainer
+Mainpage =: display_form, displayed_form, type, store_id
+=> display_form(home) => Body =:  display_form, type
+=> display_form(profile) => ProfileContainer =: display_form
+=> display_form(logout) => AuthPage =: X
+=> display_form(store) => DetailStore =: display_form, type
+=> display_form(addstore) => AddStore =: display_form
+/*
+state : 
+사장님의 페이지들을 뿌려주는 cter
+*/
+
+#BodyContainer2
+Mainpage =: display_form, displayed_form, type, store_id
+=> display_form(home) => Body =:  display_form, type
+=> display_form(profile) => ProfileContainer =: display_form
+=> display_form(logout) => AuthPage =: X
+=> display_form(store) => DetailStore =: display_form, type
+/*
+state : 
+고객님의 페이지들을 뿌려주는 cter
+*/
+
+#DetailStore
+display_form(store) =: display_form, type
+=> ReviewContainer =: type, store_id, (user_id)
+/*
+state : store
+받아온 store_id 로 가게 data를 전달 받아서 출력
+*/
+
+#ProfileContainer
+display_form(profile) => ProfileContainer =: display_form
+=> [ProfileImage, ProfileIntroduce =: introduce, StoreList =: data-가게정보, display_form]
+/*
+state : store
+B type은 mystore API로 가게 정보 가져오고
+C type은 즐겨찾기 목록 가져와서 뿌린다 (추후 기능 추가)
+프로필 관련 cpnt들을 띄어준다 (3가지)
+*/
+
+#ReviewContainer
+ReviewContainer =: type, store_id, (user_id)
+=> Review(cpnt) =: data-리뷰, type, doEdit, doDisplay, handleReviewComment
+/*
+state : Review
+this.props.store_id 를 가지고 해당 게시물의 리뷰 데이터 (Review, Review_file, Review_comment 데이터를 전부 불러옴)
+Review cpnt에서 올라오는 함수요청들을 처리한다 (display 속성 관리)
+*/
+
+#Auth
+Login =>
+=> X
+/*
+state : 
+*/
+
+#Login
+/*
+*/
+
+#Signup
+/*
+*/

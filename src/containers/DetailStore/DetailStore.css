@@ -1,0 +1,22 @@
+.DetailStore {
+  padding: 3%;
+}
+
+#store_info{
+  height: max-content;
+  display: block;
+}
+
+#edit_store_info{
+  display: none;
+  height: max-content;
+}
+
+#edit_store_info_button{
+  height: max-content;
+  display: block;
+}
+
+.storeImg{
+  display: inline;
+}

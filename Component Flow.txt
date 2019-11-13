@@ -1,0 +1,34 @@
+index.js -> App.js -> StartPage.js -> AuthPage.js -> Login.js -> Auth.js
+
+															  -> Signup.js
+
+												  -> MainPage.js
+				
+				
+MainPage.js -> [Header.js, BodyContainer.js] (사장님용)
+							or
+			   [Header.js, BodyContainer2.js](고객님용)
+			   
+			   
+
+Header.js -> BodyContainer.js display_form(profile, logout, addstore, store, home)
+					or
+			 BodyContainer2.js display_form(profile, logout, home)
+			 
+			 
+
+BodyContainer & BodyContainer2 display_form(profile) -> ProfileContainer.js -> [ProfileImage.js, ProfileIntroduce.js, StoreList.js]
+
+BodyContainer & BodyContainer2 display_form(logout) -> AuthPage.js
+
+BodyContainer & BodyContainer2 display_form(home) -> Body.js & Nav
+
+BodyContainer & BodyContainer2 display_form(store) -> DetailStore.js
+
+DetailStore.js -> ReviewContainer.js -> Review.js
+
+Body.js -> StoreList.js & info - B type -> display_form(addstore) -> AddStore.js
+
+							   - C type ->
+							   
+StoreList.js -> Store.js

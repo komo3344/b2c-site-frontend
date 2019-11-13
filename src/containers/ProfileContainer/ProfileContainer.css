@@ -1,0 +1,11 @@
+.profilecard {
+  height: max-content;
+  margin: 10px;
+  background: darkolivegreen;
+}
+
+.storelist {
+  background: darkcyan;
+  margin: 10px;
+  height: max-content;
+}
